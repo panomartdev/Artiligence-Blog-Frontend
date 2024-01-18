@@ -1,0 +1,25 @@
+.error-page{
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   &-content{
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+       .btn-primary{
+            margin: 0.5rem 1rem;
+            background: darken(#00d6d6, 15);
+            padding: 0.5rem 1rem;
+            color: white;
+            border-radius: 10px;
+            border: 2px solid white;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            &:hover{
+                color: black;
+                background-color: transparent;
+            }
+       }
+   }
+}
