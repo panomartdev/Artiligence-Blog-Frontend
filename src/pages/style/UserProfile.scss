@@ -1,0 +1,121 @@
+.profile{
+    &-container{
+        max-width: 600px;
+        padding: 1em 2em;
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        align-items: center;
+        .mypost-btn{
+            background-color: white;
+            padding: 0.25rem 1rem;
+            font-size: 18px;
+            font-weight: 300;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                background-color: black;
+                color: white;
+            }
+        }
+        .profile-details{
+            width: 100%;
+            .avatar-content{
+                width: 15em;
+                aspect-ratio: 1/1;
+                position: relative;
+                margin-inline: auto;
+                margin-top: 1rem;
+
+                .avatar-image{
+                    height: 100%;
+                    border-radius: 1rem;
+                    border: 0.5rem solid white;
+                    overflow: hidden;
+                }
+
+                .avatar-button{
+                    input{
+                        visibility: hidden;
+                    }
+
+                   
+                }
+            }
+            .profile-name{
+                text-align: center;
+                font-size: 28px;
+                font-weight: 400;
+            }
+            .error-text{
+                background-color: rgb(255, 73, 73);
+                border-radius: 0.25rem;
+                margin: 1rem 0 0 0;
+                width: 100%;
+                padding: 0.5rem 1rem;
+                p{
+                    color:white;
+                    font-size: 13px;
+                    line-height: 1.5rem;
+                }
+            }
+            .profile-informations-form{
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                .input-form{
+                    input, textarea{
+                        width: 100%;
+                        padding: 0.5rem 1rem;
+                        border: 1rem;
+                        resize: none;
+                        border-radius: 0.5rem;
+                    }
+                }
+                .password-form{
+                    background-color: white;
+                    display: flex; 
+                    width: 100%;
+                    border-radius: 0.5rem;
+                
+                      .password-input{
+                        padding: 0.5rem 1rem;
+                        width: 100%;
+                        background: transparent;
+                        
+                      }
+                      .btn-showpassword{
+                        cursor: pointer;
+                        padding: 0 0.5rem;
+                        margin-right: 0.5rem;
+                        font-size: 25px;
+                        display: flex;
+                        align-items: center;
+                      }
+                }   
+            }
+        }
+    }
+}
+.avatar-upload-btn{
+    background-color: rgb(181, 181, 181);
+    color: white;
+    position: absolute;
+    font-size: 18px;
+    right: -0.5rem;
+    bottom: 0.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    border-radius: 50%;
+}
+.check-btn{
+    cursor: pointer;
+    padding: 0;
+    font-size: 28px;
+    background-color: #008a8a;
+
+}

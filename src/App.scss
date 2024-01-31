@@ -9,6 +9,7 @@ $textcolorone : black;
     outline: 0;
     border: 0;
     font-family: 'Prompt', sans-serif;
+    transition: all 0.3s ease-in-out;
 }
 button{
     background: transparent;
@@ -46,4 +47,43 @@ img{
     max-width: 1300px;
     padding: 10px 30px;
     margin: 0 auto;
+}
+.not-found{
+    height: 70svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .not-found-text{
+        font-size: 28px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+    }
+    .error-image{
+        width: auto;
+        height: 250px;
+        display: flex;
+        margin: 2rem auto 0 auto;
+    }
+}
+.password-form{
+    background-color: white;
+    display: flex; 
+    width: 100%;
+
+      .password-input{
+        padding: 0.6rem 1rem;
+        width: 100%;
+        background: transparent;
+      }
+      .btn-showpassword{
+        cursor: pointer;
+        padding: 0 0.5rem;
+        margin-right: 0.5rem;
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+      }
 }

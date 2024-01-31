@@ -1,0 +1,36 @@
+.authors-page{
+    min-height: 70svh;
+    .authors-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
+        .author-lists{
+            display: flex;
+            align-items: center;
+            padding: 1rem ;
+            border-radius: 0.5rem;
+            background-color: white;
+            gap: 1.5rem;
+            .author-avatar{
+                display: flex;
+                align-items: center;
+                img{
+                    border-radius: 100%;
+                    height: 70px;
+                }
+            }
+            .author-information{
+                .author-name{
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                .author-post{
+                    margin-top: 0.5rem;
+                    font-size: 15px;
+                    color: rgb(61, 61, 61);
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

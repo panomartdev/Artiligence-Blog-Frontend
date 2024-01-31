@@ -4,12 +4,12 @@ import Thumbnail from '../assets/blog22.jpg'
 import { Link, useParams } from 'react-router-dom'
 
 const PostDetail = () => {
-  const {id} = useParams()
+  const {id} = useParams();
   return (
     <section className='post-details'>
        <div className='post-details-content'>
            <div className='post-details-header'>
-               <PostAuthor/>
+              <PostAuthor authorId={3} />
                <div className='post-details-buttons'>
                   <Link className='edit-btn' to={`/posts/werwer/edit`}>Edit</Link>
                   <Link className='delete-btn' to={`/posts/werwer/edit`}>Delete</Link>

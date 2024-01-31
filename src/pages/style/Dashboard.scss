@@ -1,0 +1,75 @@
+.dashboard{
+    .dashboard-container{
+        min-height: 70svh;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .all-posts-title{
+            font-size: 28px;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+        .dashboard-post{
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 0.5rem ;
+            display: grid;
+            grid-template-columns: repeat(9,1fr);
+            align-items: center;
+
+            .dashboard-thumbnail{
+                display: flex;
+                align-items: center;
+                img{
+                    height: 50px;
+                    width: 100px;
+                    object-fit: cover;
+                    border-radius: 0.25rem;
+                }
+            }
+            .dashboard-title{
+                grid-column: span 7 / span 7;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            .dashboard-actions{
+                margin-right: 1rem;
+                display: flex;
+                column-gap: 0.5rem;
+                .view-btn{
+                    display: block;
+                    text-align: center;
+                    color: black;
+                    border-radius: 0.5rem;
+                    font-weight: 700;
+                    font-size: 14px;
+                    padding: 0.25rem 0.5rem; 
+            
+                }
+                .edit-btn {
+                    display: block;
+                    text-align: center;
+                    color: white;
+                    border-radius: 0.5rem;
+                    font-weight: 400;
+                    font-size: 14px;
+                    padding: 0.25rem 1rem; 
+                    background-color: #4f46e5;
+                }
+                .delete-btn{
+                    display: block;
+                    text-align: center;
+                    color: white;
+                    font-weight: 400;
+                    font-size: 14px;
+                    border-radius: 0.5rem;
+                    padding: 0.25rem 1rem;
+                    background-color: red;
+
+                } 
+            }
+        }
+    }
+}

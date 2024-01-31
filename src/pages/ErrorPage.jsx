@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 import './style/ErrorPage.scss';
 
 const ErrorPage = () => {
-  useEffect(() => {
-    // Redirect to the homepage after 3 seconds
-    const redirectTimeout = setTimeout(() => {
-      window.history.back() 
-    }, 3000);
+  // useEffect(() => {
+  //   // Redirect to the homepage after 3 seconds
+  //   const redirectTimeout = setTimeout(() => {
+  //     window.location.href = '/';
+  //   }, 3000);
 
-    // Clear the timeout if the component is unmounted
-    return () => clearTimeout(redirectTimeout);
-  }, []);
+  //   // Clear the timeout if the component is unmounted
+  //   return () => clearTimeout(redirectTimeout);
+  // }, []);
 
   return (
     <section className='error-page'>  

@@ -33,7 +33,7 @@ const Header = () => {
         {/* Navigator links */}
         <ul className="nav-menu">
           <li>
-            <Link to="/profile">Ernest Achiever</Link>
+            <Link to="/profile/Ernest">Ernest Achiever</Link>
           </li>
           <li>
             <Link to="/create">Create Post</Link>
@@ -44,6 +44,11 @@ const Header = () => {
           <li>
             <Link className="login-btn" to="/logout" >
               Log Out
+            </Link>
+          </li>
+          <li>
+            <Link className="login-btn" to="/register" >
+              Register
             </Link>
           </li>
         </ul>
