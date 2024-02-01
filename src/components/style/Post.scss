@@ -4,11 +4,11 @@
     .posts-content{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 2.5rem;
+        gap: 1.2rem;
 
         .posts-container{
-            background: white;
-            padding: 0.5rem;
+            background: rgb(247, 247, 247);
+            overflow: hidden;
             height: auto;
             border-radius: 1rem;
             transition: all 0.4s ease;
@@ -17,16 +17,16 @@
                 box-shadow: 0 5px 10px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
             }
             .post-thumbnail{
-                padding: 0.25rem;
+               
                 img{
-                    border-radius: 0.5rem;
-                    height: 20rem;
+                    
+                    height: 18rem;
                     object-fit: cover;
                 }
                 margin-bottom: 0.25rem;
             }
             .post-content{
-                padding: 0 0.5rem;
+                padding: 0 1.5rem;
                 &-title{
                     font-weight: 700;
                     font-size: 20px;
@@ -43,8 +43,9 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin: 1rem;
+                margin: 1rem 0;
                 gap: 1rem;
+                padding: 0 1.5rem;
             
                 .post-category{
                     padding: 0.25rem 0.75rem;

@@ -24,24 +24,16 @@ const Posts = () => {
                       </div>
 
                       <div className='post-content'>
+                          <div className='post-content-text'></div>  
                           <Link className='post-content-title' to={`/posts/${item.id}`}>{item.title.length > 25 ? `${item.title.slice(0, 25)}...` : item.title}</Link>
                           <p className='post-content-description'>{item.desc.length > 50 ? `${item.desc.slice(0, 120)}...` : item.desc} </p>
-
-                          <div className='post-footer'>
-                          {/* <Link className='post-author' to={`posts/user/${item.authorId}`} >
-                                <div className='post-author-avatar'>
-                                    <img src={Avatar}/>
-                                </div>
-                                <div className='post-author-details'>
-                                    <h5>By: Ernest Achiever</h5>
-                                    <small>Just Now</small>
-                                </div>
-                          </Link> */}
-                          <PostAuthor authorId={item.authorId} />
-                          <Link className='post-category' to={`/posts/categories/${item.category}`} >
-                                {item.category}
-                          </Link>
                       </div>
+
+                      <div className='post-footer'>
+                         <PostAuthor authorId={item.authorId} />
+                         <Link className='post-category' to={`/posts/categories/${item.category}`} >
+                            {item.category}
+                         </Link>
                       </div>
 
                       

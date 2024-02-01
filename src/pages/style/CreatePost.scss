@@ -1,0 +1,52 @@
+.create-edit-post{
+    .create-edit-post-container{
+        max-width: 800px;
+        min-height: 70svh;
+        .create-edit-post-title{
+            font-size: 32px;
+            font-weight: 600;
+            color: rgb(64, 64, 64);
+        }
+        .error-output{
+            background-color: rgb(255, 73, 73);
+            border-radius: 0.25rem;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            p{
+               color:white;
+               font-size: 13px;
+               line-height: 1.5rem;
+            }
+        }
+        .create-edit-post-form{
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            .title-input{
+                width: 100%;
+                padding: 0.5rem;
+                resize: none;
+            }
+            .category-selection{
+                width: 100%;
+                padding: 0.5rem;
+                font-weight: 300;       
+            }
+            .ql-editor{
+                overflow: scroll;
+                background: rgb(255, 255, 255);
+                height: 10rem;
+    
+            }
+            .submit-btn{
+                cursor: pointer;
+                border-radius: 4px;
+                color: white;
+                padding: 0.25rem 1rem;
+                font-size: 16px;
+                background-color: #008a8a;
+            }
+        }
+    }
+}
