@@ -7,16 +7,19 @@ import { AiOutlineClose } from 'react-icons/ai';
 const Header = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
+  const [navShow, setNavShow] = useState(false);
 
-  const handleScroll = () => {
-    const currentScrollPos = window.pageYOffset;
-
-    setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 200);
-    setPrevScrollPos(currentScrollPos);
-  };
+  
 
   useEffect(() => {
-   
+  
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+  
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 200);
+      setPrevScrollPos(currentScrollPos);
+      setNavShow(false);
+    };
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -31,7 +34,7 @@ const Header = () => {
         </Link>
 
         {/* Navigator links */}
-        <ul className="nav-menu">
+        <ul className={`nav-menu ${navShow ? "active" : "" }`}>
           <li>
             <Link to="/profile/Ernest">Ernest Achiever</Link>
           </li>
@@ -41,21 +44,21 @@ const Header = () => {
           <li>
             <Link to="/authors">Authors</Link>
           </li>
-          <li>
-            <Link className="login-btn" to="/logout" >
+          <li className='login-btn'>
+            <Link className="login-btn-link" to="/logout" >
               Log Out
             </Link>
           </li>
-          <li>
-            <Link className="login-btn" to="/register" >
+          <li className='login-btn'>
+            <Link className="login-btn-link" to="/register" >
               Register
             </Link>
           </li>
         </ul>
 
         {/* toggle button */}
-        <button className="nav-toggle-btn">
-          <AiOutlineClose />
+        <button className="nav-toggle-btn" onClick={() => setNavShow(!navShow)}>
+          {navShow ? <AiOutlineClose/>: <FaBars/>}
         </button>
       </div>
     </nav>

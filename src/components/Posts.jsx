@@ -18,7 +18,12 @@ const Posts = () => {
            <div className='posts-content container'>
               {posts.map((item,index)=>(
                   <article key={index} className='posts-container'>
-
+                      
+                      <div className='post-category'>
+                         <Link className='post-category-link' to={`/posts/categories/${item.category}`} >
+                                {item.category.replace(/-/g, ' ')}
+                         </Link>
+                      </div>
                       <div className='post-thumbnail'>
                           <img src={item.thumbnail} alt={item.title}/>
                       </div>
@@ -31,9 +36,6 @@ const Posts = () => {
 
                       <div className='post-footer'>
                          <PostAuthor authorId={item.authorId} />
-                         <Link className='post-category' to={`/posts/categories/${item.category}`} >
-                            {item.category}
-                         </Link>
                       </div>
 
                       

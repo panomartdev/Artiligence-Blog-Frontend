@@ -31,7 +31,10 @@
             .category-selection{
                 width: 100%;
                 padding: 0.5rem;
-                font-weight: 300;       
+                font-weight: 300;
+                option{
+                    text-transform: capitalize;
+                }       
             }
             .ql-editor{
                 overflow: scroll;

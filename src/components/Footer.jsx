@@ -5,14 +5,14 @@ import './style/Footer.scss';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const [blogCat,setBlogCat] = useState([
-    {catName : 'agriculture', text: "Agriculture"},
-    {catName : 'business', text: "Business"},
-    {catName : 'education', text: "Education"},
-    {catName : 'entertainment', text: "Entertainment"},
-    {catName : 'art', text: "Art"},
-    {catName : 'investment', text: "Investment"},
     {catName : 'uncategorized', text: "Uncategorized"},
-    {catName : 'weather', text: "Weather"},
+    {catName : 'automation', text: "Automation"},
+    {catName : 'business', text: "Business"},
+    {catName : 'data-science', text: "Data Science"},
+    {catName : 'blockchain', text: "Blockchain"},
+    {catName : 'cyber-security', text: "Cyber Security"},
+    {catName : 'financial', text: "Financial"},
+    {catName : 'electric-vehicle', text: "Electric Vehicle"},
   ]);
   return (
     <footer>

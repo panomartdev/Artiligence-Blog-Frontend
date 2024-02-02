@@ -14,9 +14,16 @@ const CreatePost = () => {
   const [content, setContent] = useState('');
   const [thumbnail, setThumbnail] = useState('');
 
-  const categoryList = ['Agriculture','Business',
-                        'Education','Entertainment','Art',
-                        'Investment','Weather']
+  const categoryList = [
+    {catName : 'uncategorized', text: "Uncategorized"},
+    {catName : 'automation', text: "Automation"},
+    {catName : 'business', text: "Business"},
+    {catName : 'data-science', text: "Data Science"},
+    {catName : 'blockchain', text: "Blockchain"},
+    {catName : 'cyber-security', text: "Cyber Security"},
+    {catName : 'financial', text: "Financial"},
+    {catName : 'electric-vehicle', text: "Electric Vehicle"},
+  ]
 
   const modules = {
       toolbar: [
@@ -45,7 +52,7 @@ const CreatePost = () => {
                   <select className='category-selection' name="category" value={category} onChange={(e) => setCategory(e.target.value)}>
                           <option className='category-option-uncate' key={'Uncategorized'}>Uncategorized</option>
                         {categoryList.map((item)=>(
-                          <option className='category-option' key={item}>{item}</option>
+                          <option className='category-option' key={item.catName}>{item.text}</option>
                         ))}
                   </select>
                   <ReactQuill modules={modules} formats={formats} value={content} onChange={() => setContent()}/>
