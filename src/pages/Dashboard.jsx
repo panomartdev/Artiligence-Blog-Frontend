@@ -18,18 +18,19 @@ const Dashboard = () => {
                   <h2 className='all-posts-title'>All of your Posts</h2>
                   {myPost.map((item,index) => (
                       <article className='dashboard-post' key={index}>
-                           <div className='dashboard-content'>
-                              <div className='dashboard-thumbnail'>
+                           
+                            <div className='dashboard-thumbnail'>
                                     <img src={item.thumbnail}/>
-                              </div>
-                              <h5 className='dashboard-title'>{item.title}</h5>
-                           </div>
+                            </div>
 
-                           <div className='dashboard-actions'>
-                                <Link className='view-btn' to={`/posts/${item.id}`}>View</Link>
-                                <Link className='edit-btn' to={`/posts/${item.id}/edit`}>Edit</Link>
-                                <Link className='delete-btn' to={`/posts/${item.id}`}>Delete</Link>
-                           </div>
+                            <div className='dashboard-content'>
+                                <h5 className='dashboard-title'>{item.title}</h5>
+                                <div className='dashboard-actions'>
+                                    <Link className='view-btn' to={`/posts/${item.id}`}>View</Link>
+                                    <Link className='edit-btn' to={`/posts/${item.id}/edit`}>Edit</Link>
+                                    <Link className='delete-btn' to={`/posts/${item.id}`}>Delete</Link>
+                                </div>
+                            </div>
                       </article>
                   ))}
               </div>

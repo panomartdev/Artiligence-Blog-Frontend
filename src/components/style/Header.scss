@@ -91,10 +91,14 @@
                     background-color: darken(#00d6d6, 8);
                     &:hover{
                         color: white !important;
-
+                        border: 1px solid rgba(black, 0.25);
                     }
                 }
                 .login-btn-link{
+                    color:#ddfbfb;
+                    &:hover{
+                        color: black;
+                    }
                     @media screen and (max-width: 1024px) {
                         display: block;
                         width: 100%;

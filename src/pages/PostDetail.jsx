@@ -1,6 +1,7 @@
 import PostAuthor from '../components/PostAuthor'
 import './style/PostDetail.scss'
 import Thumbnail from '../assets/blog22.jpg'
+import { AiOutlineSetting } from "react-icons/ai";
 import { Link, useParams } from 'react-router-dom'
 
 const PostDetail = () => {
@@ -10,6 +11,7 @@ const PostDetail = () => {
        <div className='post-details-content'>
            <div className='post-details-header'>
               <PostAuthor authorId={3} />
+         
                <div className='post-details-buttons'>
                   <Link className='edit-btn' to={`/posts/werwer/edit`}>Edit</Link>
                   <Link className='delete-btn' to={`/posts/werwer/edit`}>Delete</Link>

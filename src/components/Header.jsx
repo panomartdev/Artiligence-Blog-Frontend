@@ -36,21 +36,21 @@ const Header = () => {
         {/* Navigator links */}
         <ul className={`nav-menu ${navShow ? "active" : "" }`}>
           <li>
-            <Link to="/profile/Ernest">Ernest Achiever</Link>
+            <Link to="/profile/Ernest" onClick={() => setNavShow(false)}>Ernest Achiever</Link>
           </li>
           <li>
-            <Link to="/create">Create Post</Link>
+            <Link to="/create" onClick={() => setNavShow(false)}>Create Post</Link>
           </li>
           <li>
-            <Link to="/authors">Authors</Link>
+            <Link to="/authors" onClick={() => setNavShow(false)}>Authors</Link>
           </li>
           <li className='login-btn'>
-            <Link className="login-btn-link" to="/logout" >
+            <Link className="login-btn-link" to="/logout" onClick={() => setNavShow(false)}>
               Log Out
             </Link>
           </li>
           <li className='login-btn'>
-            <Link className="login-btn-link" to="/register" >
+            <Link className="login-btn-link" to="/register" onClick={() => setNavShow(false)}>
               Register
             </Link>
           </li>

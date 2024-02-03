@@ -9,16 +9,28 @@
         background-color: white;
         border-radius: 10px;
         min-height: 60vh;
-
+        @media screen and (max-width: 1024px) {
+            padding: 2rem 3rem;
+        }
+        @media screen and (max-width: 640px) {
+            padding: 1rem 1.5rem;
+        }
         .post-details-header{
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid rgba(black, 0.2);
-
+            padding-bottom: 1rem;
+           
             .post-details-buttons{
                 display: flex;
                 gap: 1rem;
+                @media screen and (max-width: 1024px){
+                    gap: 0.5rem;
+                }
+                @media screen and (max-width: 640px){
+                    flex-direction: column;
+                }
                 .edit-btn {
                     display: block;
                     text-align: center;
@@ -29,6 +41,9 @@
                     font-size: 14px;
                     padding: 0.25rem 1rem; 
                     background-color: #4f46e5;
+                    @media screen and (max-width: 640px){
+                        padding: 0.1rem 0.5rem; 
+                    }
                 }
                 .delete-btn{
                     display: block;
@@ -40,7 +55,9 @@
                     border-radius: 0.5rem;
                     padding: 0.25rem 1rem;
                     background-color: red;
-      
+                    @media screen and (max-width: 640px){
+                        padding: 0.1rem 0.75rem; 
+                    }
                 }    
             }
         }
