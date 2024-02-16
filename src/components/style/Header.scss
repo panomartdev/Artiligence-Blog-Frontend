@@ -73,8 +73,8 @@
                 }            
             }
             .login-btn{
-                padding: 0.25rem 1rem;
                 border-radius: 1rem;
+                cursor: pointer;
                 color: white;
                 background-color: darken(#00d6d6, 15);
                 border: 1px solid rgba(black, 0.25);
@@ -82,6 +82,9 @@
                 &:hover{
                     color: black;
                     background-color: transparent;
+                    .login-btn-link{
+                        color: black;
+                    }
                 }
                 @media screen and (max-width: 1024px) {
                     border: none;
@@ -96,9 +99,10 @@
                 }
                 .login-btn-link{
                     color:#ddfbfb;
-                    &:hover{
-                        color: black;
-                    }
+                    display: block;
+                    width: 100%;
+                    padding: 0.25rem 1rem;
+
                     @media screen and (max-width: 1024px) {
                         display: block;
                         width: 100%;
