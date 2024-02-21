@@ -80,3 +80,5 @@ export const authorsList = [
     {id: 5 , avatar: Avatar5 , name: 'Black Widow', posts : 9},
     {id: 6 , avatar: Avatar4 , name: 'Yuqi', posts : 10}
 ]
+
+export const API_LINKS = 'http://localhost:5000/api/'

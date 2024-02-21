@@ -15,7 +15,7 @@
         padding: 0.5rem 2rem;
         margin: 0 auto;
         @media screen and (max-width: 640px) {
-            padding: 1rem 1.5rem;
+            padding: 0.5rem 1.5rem;
         }
         .main-logo{
             font-size: 36px;
@@ -26,7 +26,7 @@
                 color: #00d6d6;
             }
             @media screen and (max-width: 640px) {
-                font-size: 28px;
+                font-size: 24px;
             }
         }
         .nav-menu{
@@ -49,6 +49,7 @@
             @media screen and (max-width: 640px) {
                 width: 100%;
                 right: 0rem;
+                top: 3rem;
             }
 
             li{

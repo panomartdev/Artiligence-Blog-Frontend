@@ -20,22 +20,23 @@ const Posts = () => {
                   <article key={index} className='posts-container'>
                       
                       <div className='post-category'>
-                         <Link className='post-category-link' to={`/posts/categories/${item.category}`} >
-                                {item.category.replace(/-/g, ' ')}
-                         </Link>
+                            <Link className='post-category-link' to={`/posts/categories/${item.category}`} >
+                                    {item.category.replace(/-/g, ' ')}
+                            </Link>
                       </div>
-                      <div className='post-thumbnail'>
-                          <img src={item.thumbnail} alt={item.title}/>
-                      </div>
+                      <Link to={`/posts/${item.id}`}>
+                            <div className='post-thumbnail'>
+                                <img src={item.thumbnail} alt={item.title}/>
+                            </div>
 
-                      <div className='post-content'>
-                          <div className='post-content-text'></div>  
-                          <Link className='post-content-title' to={`/posts/${item.id}`}>{item.title.length > 25 ? `${item.title.slice(0, 25)}...` : item.title}</Link>
-                          <p className='post-content-description'>{item.desc.length > 50 ? `${item.desc.slice(0, 120)}...` : item.desc} </p>
-                      </div>
+                            <div className='post-content'>
+                                <h2 className='post-content-title'>{item.title.length > 25 ? `${item.title.slice(0, 25)}...` : item.title}</h2>
+                                <p className='post-content-description'>{item.desc.length > 50 ? `${item.desc.slice(0, 120)}...` : item.desc} </p>
+                            </div>
+                      </Link>
 
                       <div className='post-footer'>
-                         <PostAuthor authorId={item.authorId} />
+                            <PostAuthor authorId={item.authorId} />
                       </div>
 
                       

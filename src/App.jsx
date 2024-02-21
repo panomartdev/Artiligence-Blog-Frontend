@@ -1,6 +1,8 @@
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.scss'
+import { Provider } from 'react-redux';
+import store from './redux/store';
 import Layout from './components/Layout'
 import ErrorPage from './pages/ErrorPage'
 import Home from './pages/Home'
@@ -15,6 +17,7 @@ import AuthorPosts from './pages/AuthorPosts'
 import Dashboard from './pages/Dashboard'
 import EditPost from './pages/EditPost'
 import Logout from './pages/Logout'
+
 
 function App() {
   const router = createBrowserRouter([
@@ -41,7 +44,9 @@ function App() {
 
   return (
     <div className='app'>
-        <RouterProvider router={router}/>
+        <Provider store={store}>
+            <RouterProvider router={router}/>
+        </Provider>        
     </div>
   )
 }
