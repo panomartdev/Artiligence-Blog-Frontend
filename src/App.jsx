@@ -1,8 +1,7 @@
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.scss'
 import { Provider } from 'react-redux';
-import store from './redux/store';
+// import store from './redux/store';
 import Layout from './components/Layout'
 import ErrorPage from './pages/ErrorPage'
 import Home from './pages/Home'
@@ -30,23 +29,20 @@ function App() {
         {path: 'posts/:id', element: <PostDetail/>},
         {path: 'register', element: <Register/>},
         {path: 'login', element: <Login/>},
-        {path: 'profile/:id', element: <UserProfile/>},
+        {path: 'profile', element: <UserProfile/>},
         {path: 'authors', element: <Authors/>},
         {path: 'create', element: <CreatePost/>},
         {path: 'posts/categories/:category', element: <CategoryPosts/>},
         {path: 'posts/user/:id', element: <AuthorPosts/>},
-        {path: 'myposts/:id', element: <Dashboard/>},
+        {path: 'dashboard', element: <Dashboard/>},
         {path: 'posts/:id/edit', element: <EditPost/>},
-        {path: 'logout', element: <Logout/>},
       ]
     }
   ])
 
   return (
     <div className='app'>
-        <Provider store={store}>
-            <RouterProvider router={router}/>
-        </Provider>        
+        <RouterProvider router={router}/>
     </div>
   )
 }

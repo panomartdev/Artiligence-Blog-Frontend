@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { UserContext } from '../context/userContext';
 import './style/Header.scss';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 
@@ -9,8 +10,13 @@ const Header = () => {
   const [visible, setVisible] = useState(true);
   const [navShow, setNavShow] = useState(false);
 
-  
+  const {currentUser , setCurrentUser} = useContext(UserContext);
+  const navigate = useNavigate();
 
+  const logout = () => {
+      setCurrentUser(null)
+      navigate('/login')
+  }
   useEffect(() => {
   
     const handleScroll = () => {
@@ -34,27 +40,26 @@ const Header = () => {
         </Link>
 
         {/* Navigator links */}
-        <ul className={`nav-menu ${navShow ? "active" : "" }`}>
-          <li>
-            <Link to="/profile/Ernest" onClick={() => setNavShow(false)}>Ernest Achiever</Link>
-          </li>
-          <li>
-            <Link to="/create" onClick={() => setNavShow(false)}>Create Post</Link>
-          </li>
-          <li>
-            <Link to="/authors" onClick={() => setNavShow(false)}>Authors</Link>
-          </li>
-          <li className='login-btn'>
-            <Link className="login-btn-link" to="/logout" onClick={() => setNavShow(false)}>
-              Log Out
-            </Link>
-          </li>
-          <li className='login-btn'>
-            <Link className="login-btn-link" to="/register" onClick={() => setNavShow(false)}>
-              Register
-            </Link>
-          </li>
-        </ul>
+        {currentUser?.id ?  
+            (  // Login User
+            <ul className={`nav-menu ${navShow ? "active" : "" }`}>
+              <li><Link to="/profile" onClick={() => setNavShow(false)}>Profiles</Link></li>
+              <li><Link to={`/dashboard`} onClick={() => setNavShow(false)}>Dashboard</Link></li>  
+              <li><Link to="/create" onClick={() => setNavShow(false)}>Write</Link></li>  
+              <li><Link to="/authors" onClick={() => setNavShow(false)}>Authors</Link></li>
+              
+              <li className='login-out-btn'>
+                  <button className="logout-btn" to="/logout" onClick={() => {setNavShow(false); logout()}}>
+                    Log Out
+                  </button>
+              </li>
+            </ul>
+            ):( // Not Login User
+            <ul className={`nav-menu ${navShow ? "active" : "" }`}>
+              <li><Link to="/authors" onClick={() => setNavShow(false)}>Authors</Link></li>
+              <li className='login-out-btn'><Link className="login-btn-link" to="/login" onClick={() => setNavShow(false)}>Login</Link></li>
+            </ul>)
+        }
 
         {/* toggle button */}
         <button className="nav-toggle-btn" onClick={() => setNavShow(!navShow)}>

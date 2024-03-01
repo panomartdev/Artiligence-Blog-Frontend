@@ -27,6 +27,7 @@ body{
     // font-family: 'Prompt', sans-serif;
     background : hwb(240 90% 0%);
     overflow-x: hidden;
+    padding: 0 !important;
 }
 .hello-test{
     color: blue;
@@ -37,9 +38,7 @@ a{
     color: $textcolorone;
     text-decoration: none;
 }
-li{
-    list-style-type: none;
-}
+
 img{
     width: 100%;
 }
@@ -73,6 +72,10 @@ img{
         display: flex;
         margin: 2rem auto 0 auto;
     }
+    .category-post-error{
+        font-size: 32px;
+        font-weight: 300;
+    }
 }
 .password-form{
     background-color: white;
@@ -92,4 +95,11 @@ img{
         display: flex;
         align-items: center;
       }
+}
+.homepage-loader, .post-details-loading, .post-loading{
+    width: 250px;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

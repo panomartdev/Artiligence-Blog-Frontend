@@ -63,11 +63,18 @@
         }
         .post-details-title{
             font-size: 32px;
-            margin: 1rem 0 2rem 0;
-           
+            font-weight: 700;
+            margin: 1rem 0 2rem 0;    
+        }
+        .post-details-thumbnail{
+            img{
+                max-height: 60vh;
+                width: 100%;
+                object-fit: contain;
+            }
         }
         .post-details-text{
-            margin-top: 1rem;
+            margin-top: 3rem;
         }
     }
 }

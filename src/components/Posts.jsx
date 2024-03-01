@@ -10,8 +10,8 @@ import { mockupPost } from '../utils/data';
 import PostAuthor from './PostAuthor';
 
 
-const Posts = () => {
-  const [posts, setPosts] = useState(mockupPost);
+const Posts = ({postData}) => {
+  const [posts, setPosts] = useState(postData);
   return (
     <section className='posts container'>
         {posts.length > 0 ? (
@@ -24,19 +24,19 @@ const Posts = () => {
                                     {item.category.replace(/-/g, ' ')}
                             </Link>
                       </div>
-                      <Link to={`/posts/${item.id}`}>
+                      <Link to={`/posts/${item._id}`}>
                             <div className='post-thumbnail'>
-                                <img src={item.thumbnail} alt={item.title}/>
+                                <img src={`${import.meta.env.VITE_ASSETS_URL}/uploads/${item.thumbnail}`} alt={item.title}/>
                             </div>
 
                             <div className='post-content'>
                                 <h2 className='post-content-title'>{item.title.length > 25 ? `${item.title.slice(0, 25)}...` : item.title}</h2>
-                                <p className='post-content-description'>{item.desc.length > 50 ? `${item.desc.slice(0, 120)}...` : item.desc} </p>
+                                <p dangerouslySetInnerHTML={{__html : item.description}} className='post-content-description'></p>
                             </div>
                       </Link>
 
                       <div className='post-footer'>
-                            <PostAuthor authorId={item.authorId} />
+                            <PostAuthor authorId={item.creator} updatedAt={item.updatedAt} />
                       </div>
 
                       

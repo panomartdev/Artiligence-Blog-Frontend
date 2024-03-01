@@ -1,48 +1,55 @@
-import { useState } from "react"
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react"
+import { Link, useParams } from "react-router-dom";
+import Loader from "../components/Loader";
 import PostAuthor from "../components/PostAuthor";
 import { authorPost } from "../utils/data"
+import Posts from "../components/Posts";
+import { STATUS } from "../utils/status";
+import axios from "axios";
 
 const AuthorPosts = () => {
-  const [authorPosts, setAuthorPosts] = useState(authorPost);
+  
+  const [authorPosts, setAuthorPosts] = useState("");
+  const {id} = useParams()
+  const [loading, setLoading] = useState(STATUS.IDLE)
+
+  const getPostsByAuthor = async () =>{
+      setLoading(STATUS.LOADING)
+      try {
+        const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/posts/user/${id}`)
+        const data = await response?.data
+        
+        setAuthorPosts(data);
+        setLoading(STATUS.SUCCEEDED);
+
+      } catch (error) {
+
+        setLoading(STATUS.FAILED)
+        Swal.fire({
+          title: error.response.data.message,
+          text: "",
+          icon: "error"
+        })
+      }
+  }
+  useEffect(()=>{
+      getPostsByAuthor()
+  },[])
+
+  document.title = `Artiligence`
+
   return (
     <section className='author-posts container'>
-        {authorPosts.length > 0 ? (
-           <div className='posts-content container'>
-              {authorPosts.map((item,index)=>(
-                  <article key={index} className='posts-container'>
-                      <div className='post-thumbnail'>
-                          <img src={item.thumbnail} alt={item.title}/>
-                      </div>
-
-                      <div className='post-content'>
-                          <Link className='post-content-title' to={`/posts/${item.id}`}>{item.title.length > 25 ? `${item.title.slice(0, 25)}...` : item.title}</Link>
-                          <p className='post-content-description'>{item.desc.length > 50 ? `${item.desc.slice(0, 120)}...` : item.desc} </p>
-
-                          <div className='post-footer'>
-                          {/* <Link className='post-author' to={`posts/user/${item.authorId}`} >
-                                <div className='post-author-avatar'>
-                                    <img src={Avatar}/>
-                                </div>
-                                <div className='post-author-details'>
-                                    <h5>By: Ernest Achiever</h5>
-                                    <small>Just Now</small>
-                                </div>
-                          </Link> */}
-                          <PostAuthor authorId={item.authorId} />
-                          <Link className='post-category' to={`/posts/categories/${item.category}`} >
-                                {item.category}
-                          </Link>
-                      </div>
-                      </div>
-
-                      
-                  </article>
-              ))}
-           </div>
-           ):(
-           <h2 className='not-found'>No Author posts Found</h2>)}
-          
+        {loading == STATUS.LOADING ? (
+          <div className="post-loading container">
+              <Loader/>
+          </div>
+          ):(
+          <div className="container">
+              <Posts postData={authorPosts}/>
+          </div>
+          )
+        }
     </section>
   )
 }

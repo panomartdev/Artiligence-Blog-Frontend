@@ -1,6 +1,7 @@
 @import '../../App.scss';
 
 .post-author{
+    margin-top: 0.5rem;
     display: flex;
     align-items: center;
     &-avatar{
@@ -14,7 +15,8 @@
     &-details{
         margin-left: 1rem;
         small{
-            color: rgba(black,0.7); 
+            color: rgba(black,0.6);
+            font-size: 12px; 
         }
     }
 }

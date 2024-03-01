@@ -1,12 +1,14 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import errorImg from '../assets/error.webp'
+import { Link, useNavigate } from 'react-router-dom';
 import './style/ErrorPage.scss';
 
 const ErrorPage = () => {
+    const navigate = useNavigate();
   // useEffect(() => {
   //   // Redirect to the homepage after 3 seconds
   //   const redirectTimeout = setTimeout(() => {
-  //     window.location.href = '/';
+  //      navigate('/') 
   //   }, 3000);
 
   //   // Clear the timeout if the component is unmounted
@@ -16,9 +18,10 @@ const ErrorPage = () => {
   return (
     <section className='error-page'>  
       <div className='error-page-content'>
-        <h2>Page Not Found</h2>
+        <img src={errorImg}/>
+        <h2>Page Not Found </h2>
         <p>Redirecting back ...</p>
-        <Link to='/' className='btn-primary'>Go back Home</Link>
+        <Link to='/' className='btn-primary'>Go Back Home</Link>
       </div>
     </section>
   );
