@@ -17,6 +17,7 @@ const Header = () => {
       setCurrentUser(null)
       navigate('/login')
   }
+  
   useEffect(() => {
   
     const handleScroll = () => {

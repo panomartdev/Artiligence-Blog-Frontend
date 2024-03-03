@@ -4,7 +4,9 @@ export const UserContext = createContext();
 
 const UserProvider = ({children}) => {
     const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user')))
+    const token = currentUser?.token;
     
+
     useEffect(() => {
         localStorage.setItem('user', JSON.stringify(currentUser))
     },[currentUser])
