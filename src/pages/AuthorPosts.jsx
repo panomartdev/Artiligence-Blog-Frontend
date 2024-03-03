@@ -11,7 +11,7 @@ const AuthorPosts = () => {
   
   const [authorPosts, setAuthorPosts] = useState("");
   const {id} = useParams()
-  const [loading, setLoading] = useState(STATUS.IDLE)
+  const [loading, setLoading] = useState(STATUS.IDLE);
 
   const getPostsByAuthor = async () =>{
       setLoading(STATUS.LOADING)
