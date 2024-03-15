@@ -172,6 +172,7 @@ const EditPost = () => {
                                 {category.replace("-", " ")}
                                 <div className={`arrow ${categoryOpen ? 'open':''}`}></div>
                             </div>
+                            
                             <div className='categories'>
                                 <ul className={`category-name ${categoryOpen ? "open":''}`}>
                                     {categoryList.map((item,index)=>(

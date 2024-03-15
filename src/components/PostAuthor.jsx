@@ -1,8 +1,6 @@
 import './style/PostAuthor.scss'
 import { Link } from 'react-router-dom'
-import Avatar1 from '../assets/avatar1.jpg';
 import { STATUS } from '../utils/status';
-import { authorsList } from '../utils/data';
 import { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 import axios from 'axios';
@@ -10,7 +8,6 @@ import ReactTimeAgo from 'react-time-ago'
 import TimeAgo from 'javascript-time-ago'
 import US from 'javascript-time-ago/locale/es-US.json'
 import en from 'javascript-time-ago/locale/en.json';
-import Loader from './Loader';
 TimeAgo.addDefaultLocale(en)
 TimeAgo.addLocale(US)
 

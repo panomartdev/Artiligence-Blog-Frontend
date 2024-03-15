@@ -1,12 +1,7 @@
 import { useState } from 'react'
 import './style/Post.scss';
 import errorimg from '../assets/error.webp'
-import Thumbnails1 from '../assets/blog1.jpg';
-import Thumbnails2 from '../assets/blog2.jpg';
-import Thumbnails3 from '../assets/blog3.jpg';
-import Avatar from '../assets/avatar1.jpg';
 import { Link } from 'react-router-dom';
-import { mockupPost } from '../utils/data';
 import PostAuthor from './PostAuthor';
 
 

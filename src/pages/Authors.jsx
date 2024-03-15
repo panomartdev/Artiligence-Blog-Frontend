@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import errorimg from '../assets/error.webp'
-import { authorsList } from '../utils/data'
 import './style/Author.scss'
 import { Link } from 'react-router-dom'
 import { STATUS } from '../utils/status'

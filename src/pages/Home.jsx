@@ -1,6 +1,5 @@
 import './style/Home.scss';
 import Posts from '../components/Posts';
-import { mockupPost } from '../utils/data';
 import { useState, useEffect } from 'react';
 import { STATUS } from '../utils/status';
 import axios from 'axios';

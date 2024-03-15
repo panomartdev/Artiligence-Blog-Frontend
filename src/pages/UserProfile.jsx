@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './style/UserProfile.scss';
-import Avatar from '../assets/avatar5.jpg';
 import {FaEdit, FaCheck} from 'react-icons/fa';
 import { AiOutlineEye,AiOutlineEyeInvisible } from "react-icons/ai";
 import { Link, useNavigate } from 'react-router-dom';

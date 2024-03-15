@@ -1,6 +1,5 @@
 import PostAuthor from '../components/PostAuthor'
 import './style/PostDetail.scss'
-import Thumbnail from '../assets/blog22.jpg'
 import { AiOutlineSetting } from "react-icons/ai";
 import Swal from 'sweetalert2';
 import { Link, useNavigate, useParams } from 'react-router-dom'

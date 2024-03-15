@@ -4,7 +4,6 @@ import { STATUS } from '../utils/status';
 import Loader from '../components/Loader';
 import errorimg from '../assets/error.webp'
 import { UserContext } from '../context/userContext';
-import { mockupPost } from '../utils/data'
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import axios from 'axios';

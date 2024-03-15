@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom";
 import Loader from "../components/Loader";
 import PostAuthor from "../components/PostAuthor";
-import { authorPost } from "../utils/data"
 import Posts from "../components/Posts";
 import { STATUS } from "../utils/status";
 import axios from "axios";
