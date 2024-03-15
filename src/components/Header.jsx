@@ -45,6 +45,7 @@ const Header = () => {
             (  // Login User
             <ul className={`nav-menu ${navShow ? "active" : "" }`}>
               <li><Link to="/profile" onClick={() => setNavShow(false)}>Profiles</Link></li>
+              <li><Link to="/authors" onClick={() => setNavShow(false)}>Authors</Link></li>
               <li><Link to={`/dashboard`} onClick={() => setNavShow(false)}>Dashboard</Link></li>  
               <li><Link to="/create" onClick={() => setNavShow(false)}>Write</Link></li>  
               
