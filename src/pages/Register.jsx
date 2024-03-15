@@ -5,7 +5,6 @@ import Swal from 'sweetalert2'
 import './style/Forms.scss';
 import { validateEmail } from '../utils/tools';
 import Loader from '../components/Loader';
-import { API_URL } from '../utils/urlApi';
 
 const Register = () => {
   document.title = 'Register to Artiligence Blog'
