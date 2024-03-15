@@ -8,9 +8,9 @@ import PostAuthor from './PostAuthor';
 const Posts = ({postData}) => {
   const [posts, setPosts] = useState(postData);
   return (
-    <section className='posts container'>
+    <section className='posts'>
         {posts.length > 0 ? (
-           <div className='posts-content container'>
+           <div className='posts-content'>
               {posts.map((item,index)=>(
                   <article key={index} className='posts-container'>
                       

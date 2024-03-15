@@ -74,7 +74,7 @@ img{
     }
     .category-post-error{
         font-size: 32px;
-        font-weight: 300;
+        font-weight: 400;
     }
 }
 .password-form{
@@ -102,4 +102,16 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.maintxt-one{
+    color: darken(#00d6d6, 15);
+}
+.maintxt-two{
+    color: #00d6d6;
+}
+.category-title{
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+    margin: 1rem 0 2rem 0;
 }

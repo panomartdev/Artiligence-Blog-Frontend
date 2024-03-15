@@ -56,7 +56,8 @@ const CategoryPosts = () => {
                     </h2>
             ) : (
                 <div>
-                     <Posts postData={categoryPosts}/>
+                    <h2 className="category-title">Categories of : {categoryTitle}</h2>
+                    <Posts postData={categoryPosts}/>
                 </div>
             )
         }

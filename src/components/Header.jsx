@@ -47,7 +47,6 @@ const Header = () => {
               <li><Link to="/profile" onClick={() => setNavShow(false)}>Profiles</Link></li>
               <li><Link to={`/dashboard`} onClick={() => setNavShow(false)}>Dashboard</Link></li>  
               <li><Link to="/create" onClick={() => setNavShow(false)}>Write</Link></li>  
-              <li><Link to="/authors" onClick={() => setNavShow(false)}>Authors</Link></li>
               
               <li className='login-out-btn'>
                   <button className="logout-btn" to="/logout" onClick={() => {setNavShow(false); logout()}}>

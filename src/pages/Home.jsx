@@ -1,6 +1,7 @@
 import './style/Home.scss';
 import Posts from '../components/Posts';
 import { useState, useEffect } from 'react';
+import Hero from "../components/Hero";
 import { STATUS } from '../utils/status';
 import axios from 'axios';
 import Loader from '../components/Loader';
@@ -34,7 +35,8 @@ const Home = () => {
   console.log(homePosts);
 
   return (
-    <div className=''>
+    <main>
+        <Hero/>
         {loading == STATUS.LOADING ? (
           <div className='homepage-loader container'>
             <Loader/>
@@ -43,11 +45,12 @@ const Home = () => {
             <div className='container'>
               {/* {JSON.stringify(homePosts)} */}
               <Posts postData={homePosts}/>
+               
             </div>
           )
         } 
       
-    </div>
+    </main>
   )
 }
 
