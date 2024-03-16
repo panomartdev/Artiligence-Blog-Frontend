@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { Link, useNavigate } from "react-router-dom";
 import { STATUS } from '../utils/status';
 import Loader from '../components/Loader';
+import Skeleton from '../components/Skeleton';
 import errorimg from '../assets/error.webp'
 import axios from 'axios';
 import Posts from '../components/Posts';
@@ -46,8 +47,8 @@ const CategoryPosts = () => {
     <section className='category-posts container'>
         {
             loading == STATUS.LOADING ? (
-                <div className='homepage-loader container'>
-                     <Loader/>
+                <div className="container">
+                    <Skeleton/>
                 </div>
             ) : loading == STATUS.FAILED ? (
                     <h2 className='not-found'>

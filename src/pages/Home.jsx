@@ -3,11 +3,12 @@ import Posts from '../components/Posts';
 import { useState, useEffect } from 'react';
 import Hero from "../components/Hero";
 import { STATUS } from '../utils/status';
+import Skeleton from '../components/Skeleton';
 import axios from 'axios';
 import Loader from '../components/Loader';
 
 const Home = () => {
-  document.title = 'Artiligence'
+  document.title = 'Artiligence Blog'
 
   const [homePosts, setHomePosts] = useState([]);
   const [loading, setLoading] = useState(STATUS.IDLE);
@@ -38,8 +39,8 @@ const Home = () => {
     <main>
         <Hero/>
         {loading == STATUS.LOADING ? (
-          <div className='homepage-loader container'>
-            <Loader/>
+          <div className="container">
+              <Skeleton/>
           </div>
           ):(
             <div className='container'>
